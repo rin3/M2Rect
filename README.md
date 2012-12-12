@@ -4,9 +4,7 @@
 Assigning appropriate TX#s to QSO records in a Cabrillo format
 for Multi 2TX contest log
 
-rin fukuda, jg1vgx@jarl.com, Mar 2006
-ver 0.03
-for CQWW, ARRLDX logs etc.
+rin fukuda, jg1vgx@jarl.com
 
 Requirements
 ------------
@@ -20,7 +18,9 @@ http://www.kkn.net/~trey/cabrillo/qso-template.html
 
 2. Start the script, such as:
 
-    perl M2Rect.pl
+    ```
+    > perl M2Rect.pl
+    ```
     
     then, enter the file name of the Cabrillo log. Hour summary of QSY counts will be shown in the screen. If excess QSYs had been detected, you will be warned. In that case, consider submitting your log into Multi/Multi category rather than Multi/2TX.
 
