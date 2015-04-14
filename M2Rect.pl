@@ -67,8 +67,9 @@ while(<F>) {
 # @qsos array is ready here
 
 # locating the last column where TX# is written excluding LF and CR
-$qsolen = length($qsos[0]);
---$qsolen while(substr($qsos[0],$qsolen-1) eq chr(10) or substr($qsos[0],$qsolen-1) eq chr(13));
+my $temp = $qsos[0];
+chop($temp) while(substr($temp, length($temp)-1, 1) eq chr(10) or substr($temp, length($temp)-1, 1) eq chr(13) or substr($temp, length($temp)-1, 1) eq ' ');
+$qsolen = length($temp);
 
 my($q, @qs, $datehr);
 my $curhr;		# holds current datehr
